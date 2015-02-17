@@ -11,7 +11,7 @@ class ClubsController < ApplicationController
     @student = current_student.clubs
 
     unless @student.include? @club
-      render 'public/403.html'
+      render 'public/403.html', status: 403
     end
 
   end
